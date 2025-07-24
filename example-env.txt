@@ -1,0 +1,7 @@
+# SECURITY
+SECRET_KEY=your-very-secret-key-here
+DEBUG=True
+ALLOWED_HOSTS=localhost,123.456.789.000
+
+# CORS
+ALLOWED_ORIGIN=http://123.456.789.000:8282
