@@ -138,6 +138,14 @@ CORS_ORIGIN_WHITELIST = (
     os.environ.get('ALLOWED_ORIGIN', 'http://localhost:8282'),
 )
 
+
+from corsheaders.defaults import default_headers
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "content-type",
+    # "authorization",  # uncomment if you use Authorization headers
+]
+
+
 # Tell Django about the custom `User` model we created. The string
 # `authentication.User` tells Django we are referring to the `User` model in
 # the `authentication` module. This module is registered above in a setting
