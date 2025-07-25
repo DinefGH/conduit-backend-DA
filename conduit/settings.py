@@ -145,7 +145,7 @@ CORS_ORIGIN_WHITELIST = (
 
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
-    "Content-Type",
+    "content-type",
     # "authorization",  # uncomment if you use Authorization headers
 ]
 
