@@ -158,8 +158,6 @@ CORS_ALLOW_METHODS = list(default_methods) + [
   # but you can customize here if needed
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-
 
 CORS_ALLOW_CREDENTIALS = True
 
