@@ -141,13 +141,13 @@ CORS_ORIGIN_WHITELIST = (
     os.environ.get('ALLOWED_ORIGIN', 'http://localhost:8282'),
 )
 
-CORS_ALLOW_ALL_HEADERS = True
 
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
-    "content-type",
+    'content-type',
+    'Content-Type',
     'authorization',
-    'x-csrftoken',   
+    'x-csrftoken',
 ]
 
 
