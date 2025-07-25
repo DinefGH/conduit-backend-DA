@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-from corsheaders.defaults import default_headers
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,6 +30,8 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
 
 
 # Application definition
+
+from corsheaders.defaults import default_headers
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -140,9 +142,11 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 
+
+
 CORS_ALLOW_HEADERS = list(default_headers) + [
     "Content-Type",
-    "Authorization",
+    # "authorization",  # uncomment if you use Authorization headers
 ]
 
 CORS_ALLOW_CREDENTIALS = True
