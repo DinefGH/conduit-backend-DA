@@ -31,7 +31,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
 
 # Application definition
 
-from corsheaders.defaults import default_headers
+from corsheaders.defaults import default_headers, default_methods
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -147,6 +147,12 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_HEADERS = list(default_headers) + [
     "Content-Type",
     # "authorization",  # uncomment if you use Authorization headers
+]
+
+
+CORS_ALLOW_METHODS = list(default_methods) + [
+  # default_methods already covers GET, POST, PUT, PATCH, DELETE, OPTIONS
+  # but you can customize here if needed
 ]
 
 CORS_ALLOW_CREDENTIALS = True
