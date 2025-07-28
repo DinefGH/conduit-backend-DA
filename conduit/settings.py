@@ -139,7 +139,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
+CORS_ORIGIN_WHITELIST = (
+    os.environ.get('ALLOWED_ORIGIN', 'http://localhost:8282'),
+)
 
 
 
